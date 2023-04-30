@@ -1,0 +1,14 @@
+table tr th{
+    border: 1px solid black;
+    text-align: justify;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(2, 2, 2);
+}
+
+table{
+    border-radius: 20px;
+}
+
+.tabela{
+    background-color: rgb(192, 236, 247);
+}

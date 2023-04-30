@@ -1,0 +1,44 @@
+<template>
+    
+    <div class="slds-box slds-theme_shade" >       
+        <h1>Calculadora LWC</h1>
+        <lightning-input label="Insira um número" type="number" value={num1} onchange={handleNum1Change}></lightning-input><br/>
+        <lightning-input label="Insira outro número" type="number" value={num2} onchange={handleNum2Change}></lightning-input><br/>
+        
+        <div class="slds-box slds-theme_default">
+            <template if:true={isAdd}>
+                Adição de dois números: {num3}
+                 
+            </template>
+        
+            <template if:true={isSub}>
+                Subtração de dois números: {num3}
+               
+            </template>
+        
+            <template if:true={isMul}>
+                Multiplicação de dois números: {num3}
+               
+            </template>
+        
+            <template if:true={isDiv}>
+                Divisão de dois números: {num3}
+               
+            </template>
+        </div>
+        
+        <br/><br/>
+        <lightning-button variant="brand" label="Adição"  onclick={addAction}></lightning-button>
+        <lightning-button variant="brand" label="Subtração" onclick={subtractionAction}></lightning-button>
+        <lightning-button variant="brand" label="Multiplicação"  onclick={multiplicationAction}></lightning-button>
+        <lightning-button variant="brand" label="Divisão"  onclick={divisionAction}></lightning-button>
+        
+        <template if:true={isRefresh}>
+            <lightning-button variant="destructive-text" label="Refresh"  onclick={resetAction}></lightning-button>
+        </template>
+
+        <template if:true={errorMessage}>
+            <p class="slds-text-color_error">{errorMessage}</p>
+        </template>
+    </div>
+</template>
